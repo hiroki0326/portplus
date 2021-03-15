@@ -1,0 +1,26 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <div class="slide">
+    <div class="slide1">
+      <div class="background1">
+        <%= image_tag "portplus-logo.png", class:"portplus-logo" %>
+      </div>
+    </div>
+      <div class="slide2">
+      <header>
+      <%= image_tag("portplus-logo2.png", class:"portplus-logo2") %>
+      </header>
+        <div class="background2">
+          <P> make up portfolio </p>
+          <h1 class="port-text">あなたの作品に色付けを。</h1>
+          <h2 class="port-text-sub">オリジナルのポートフォリオを作成しましょう。</h2>
+          <h2> <span class="font_color">picture</span> / <span class="font_color2">illustration</span> / <span class="font_color3">design</span>  ... </h2>
+          <div class="session">
+            <li><%= link_to 'ログイン', "#", class: "login" %></li>
+            <li><%= link_to '新規登録', "#", class: "sign-up" %></li>
+          </div>
+        </div>
+      </div>
+  </div>

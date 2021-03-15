@@ -1,0 +1,123 @@
+.slide {
+  position: relative; 
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #111111;
+  }
+  
+  .slide1 {
+    position: absolute;
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    background-color:#111111;
+  }
+
+  .background1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portplus-logo {
+    padding-top: 10%;
+    width: 34%;
+    height: 34%;
+  }
+
+  .slide2 {
+    position: absolute;
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #111111;
+  }
+
+  .portplus-logo2 {
+    margin: 25px 0 0 19px;
+    width: 9%;
+    height: 6%;
+  }
+
+  .background2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+  }
+.background2 p {
+  font-family: 'Dancing Script', cursive;
+  margin-top: 7%;
+  margin-bottom: 30px;
+  font-size: 70px;
+}
+
+  .font_color {
+    color: #9fc084;
+  }
+  .font_color2 {
+    color: #fee1a6;
+  }
+  .font_color3 {
+    color: #bd7370;
+  }
+
+  .port-text {
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'Osaka';
+  }
+
+  .background2 h2 {
+    font-family: cursive, 'ヒラギノ明朝 ProN W3';
+    font-weight: 100;
+  }
+
+  .session {
+    margin-top: 30px;
+    font-size: 20px;
+    display: flex;
+  }
+
+  .login {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    background: #f7f7f7;
+    border-left: solid 6px #5c5c5c;
+    color: #111111;
+    font-weight: bold;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    margin-right: 10px;
+    transition: background-color 0.4s;
+  }
+  .login:active {
+    box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+    transform: translateY(2px);
+  }
+  .login:hover {
+    background-color: #5c5c5c;
+  }
+
+  .sign-up {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    background: #f7f7f7;
+    border-left: solid 6px #5c5c5c;
+    color: #111111;
+    font-weight: bold;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    margin-left: 10px;
+    transition: background-color 0.4s;
+  }
+  .sign-up:active {
+    box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+    transform: translateY(2px);
+  }
+  .sign-up:hover {
+    background-color: #5c5c5c;
+  }
