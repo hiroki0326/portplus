@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function(){
+document.addEventListener("turbolinks:load", function() {
 $(function() {
   $(".slide1").fadeIn(2000);
   setTimeout(dispNextSlide, 4000);

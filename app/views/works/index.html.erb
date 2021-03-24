@@ -1,6 +1,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
   <div class="slide">
     <div class="slide1">
@@ -18,8 +16,13 @@
           <h2 class="port-text-sub">オリジナルのポートフォリオを作成しましょう。</h2>
           <h2> <span class="font_color">picture</span> / <span class="font_color2">illustration</span> / <span class="font_color3">design</span>  ... </h2>
           <div class="session">
-            <li><%= link_to 'ログイン', "#", class: "login" %></li>
-            <li><%= link_to '新規登録', "#", class: "sign-up" %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+            <li><%= link_to 'マイページへ', user_path(current_user.id), class: "logout" %></li>
+          <% else %>
+            <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+            <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+          <% end %>
           </div>
         </div>
       </div>

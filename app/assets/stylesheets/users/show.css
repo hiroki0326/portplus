@@ -1,0 +1,155 @@
+.nav {
+  height: 50px;
+}
+.nav li {
+  display: inline;
+}
+.nav a{
+  line-height: 50px;
+  position: relative;
+  left: calc(100vw - 20%);
+  color: #e4e3e3;
+  background-color: #4d6391;
+  padding: 10px;
+}
+
+.header-user {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding: 0 20px 0 20px;
+}
+
+.header-image {
+  width: 100%;
+  height: 200px;
+}
+
+.artist-name {
+  font-size: 40px;
+  color: #e4e3e3;
+  letter-spacing: 14px;
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.new-work-font {
+  font-size: 40px;
+}
+
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 0 0;
+}
+
+.card-line {
+  border: 1px #e4e3e3 solid;
+  width: 82%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.card-line1 {
+  border: 1px #e4e3e3 solid;
+  width: 82%;
+  margin: auto;
+}
+
+.lists {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lists li {
+  width: 50vh;
+  padding: 1vw;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 300px;
+  height: 300px;
+  object-fit:contain;
+  border: 1px rgba(107, 107, 107, 0.2) solid;
+}
+
+.card_title {
+  font-size: 17px;
+  margin: 8px 0 8px 0;
+  font-weight: bold;
+  color: #e4e3e3;
+  text-align: center;
+}
+
+.image_list {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 1.5% 50px 1.5%;
+}
+
+.profile {
+  background-color: #12203d;
+}
+
+.profile-title {
+  font-size: 40px;
+  letter-spacing: 14px;
+  margin: 0 0 30px 0;
+  text-align: center;
+  padding-top: 60px;
+}
+.profile-title {
+  color: #e4e3e3;
+}
+
+.profile-contents {
+  width: 60%;
+  margin: auto;
+  color: #e4e3e3;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.profile-temple {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-sub {
+  white-space: pre-line;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.profile-pr {
+  letter-spacing: 0px;
+  font-size: 18px;
+  margin-top: 8px;
+  padding-bottom: 50px;
+}
+
+.site-header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4d6391;
+}
+
+.new-works {
+  font-size: 20px;
+  color: #e4e3e3;
+  margin-bottom: 50px;
+}

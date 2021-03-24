@@ -1,0 +1,108 @@
+
+<div id="hamburger">
+  <span class="inner_line" id="line1"></span>
+  <span class="inner_line" id="line2"></span>
+  <span class="inner_line" id="line3"></span>
+</div>
+
+
+<nav id="nav">
+  <ul>
+    <li><a href="#profile">PROFILE</a></li>
+    <li><a href="#works">WORKS</a></li>
+    <li><%= link_to "NEW WORK", new_work_path, class:"toplink"%></li>
+    <li><%= link_to "TOP PAGE", indextop_works_path, class:"toplink"%></li>
+  </ul>
+</nav>
+
+<div class="header-user">
+<% if @user.image.attached?%>
+<%= image_tag @user.image, class: 'header-image' %>
+<% else %>
+<%= image_tag "portplus.flower.png", class:"header-image" %>
+<% end %>
+</div> 
+<div class="artist-name">
+    -<%= @user.artist_name %>&emsp;WORKS-
+</div>
+
+<div class="card-wrapper">
+<a name="work"></a>
+<div class="card-line"></div>
+<ul class="lists">
+
+  <%# /投稿されてない場合 %>
+  <% if @works[0] == nil %>
+  <li class="image_list">
+  <div class="card">
+  <%=  image_tag("IMG_4357.JPG", class: :card_img ) %>
+  <div class="card_title">
+    <P>タイトル</P>
+  </div>
+</div>
+</li>
+  <li class="image_list">
+  <div class="card">
+  <%=  image_tag("IMG_4807.PNG", class: :card_img ) %>
+  <div class="card_title">
+    <P>タイトル</P>
+  </div>
+</div>
+</li>
+  <li class="image_list">
+  <div class="card">
+  <%=  image_tag("IMG_4808.PNG", class: :card_img ) %>
+  <div class="card_title">
+    <P>タイトル</P>
+  </div>
+</div>
+</li>
+    <div class='new-works'>
+      <p>このように投稿されます。</p>
+      <p>画面左上のメニューから作品を投稿してみましょう！</p>
+    </div>
+  <% end %>
+
+<% @works.each do |work| %>
+<li class="image_list">
+<div class="card">
+  <%= link_to image_tag(work.image, class: :card_img ), work_path(work.id) %>
+  <div class="card_title">
+    <%= work.title %>
+  </div>
+</div>
+</li>
+<% end %>
+</ul>
+<div class="card-line1"></div>
+</div>
+<a name="profile"></a>
+<div class="profile">
+<div class="profile-title">-PROFILE-</div> 
+<div class="profile-contents">
+  <div class="profile-temple">
+    <p>artist name:</p>
+    <%= @user.artist_name %>
+  </div>
+  <div class="profile-temple">
+    <p>full name:</p>
+    <%= @user.full_name %>
+  </div>
+  <div class="profile-temple">
+    <p>DOB:</p>
+    <%= @user.birthday %>
+  </div>
+    <div class="profile-temple">
+    <p>genre:</p>
+    <%= @user.genre %>
+  </div>
+  <div class="profile-sub">
+  profile:
+    <div class="profile-pr"><%= @user.profile %></div>
+  </div>
+</div>
+  <div class="card-line1"></div>
+</div>
+
+<p class="site-header">2021 portplus+ All Rights Reserved.</p>
+

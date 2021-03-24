@@ -1,0 +1,50 @@
+<div class="sign-up-logo1">
+<%= image_tag "portplus.flower.png", class:"flower" %>
+<%= link_to image_tag("portplus-logo2.png", class:"sign-up-logo2"), user_path(current_user.id) %>
+</div>
+<div class="sign-up-message">
+<p class="new-work-font">NEW WORK !!</p>
+</div>
+
+<%= form_with model: @work, class: 'registration-main', local: true do |f| %>
+<div class="sign-up-page">
+
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">タイトル</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :title, class:"input-genre", id:"title", placeholder:"任意" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">キャッチコピー(任意)</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :catch_copy, class:"input-genre", id:"catch_copy", placeholder:"任意" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">コンセプト(任意)</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :concept, class:"input-genre", id:"concept", placeholder:"任意" %>
+    </div>
+  </div>
+
+      <div class="form-group">
+      <div class="click-upload">
+        <P>作品を選択 ※必須</p>
+        <%= f.file_field :image, id:"header-image" %>
+      </div>
+    </div>
+
+  <div class="sign-up-btn">
+      <%= f.submit "登録", class:"sign-up-color-btn" %>
+  </div>
+</div>
+<% end %>

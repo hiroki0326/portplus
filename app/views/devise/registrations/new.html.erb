@@ -1,0 +1,112 @@
+<div class="sign-up-logo1">
+<%= image_tag "portplus.flower.png", class:"flower" %>
+<%= link_to image_tag("portplus-logo2.png", class:"sign-up-logo2"), indextop_works_path %>
+</div>
+<div class="sign-up-message">
+<h2> Welcome to portplus+ !! </h2>
+<p>※記入欄は全て入力してください。</p>
+</div>
+
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+<div class="sign-up-page">
+
+
+<%= render "devise/shared/error_messages", resource: resource %>
+
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
+    <p class='info-text'>6文字以上の半角英数字を設定してください</p>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード(確認)</label>
+    </div>
+    <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">お名前(全角)</label>
+    </div>
+    <%= f.text_area :full_name, class:"input-default", id:"full_name", placeholder:"例) 山田 太朗" %>
+    <p class='info-text'>フルネームを記入してください。</p>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">生年月日</label>
+    </div>
+    <div class='input-birth-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :birthday,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">お名前(全角)</label>
+    </div>
+    <%= f.text_area :artist_name, class:"input-default", id:"full_name", placeholder:"例) ダーダーベーダー" %>
+    <p class='info-text'>活動名を記入してください。</p>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ジャンル</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :genre, class:"input-genre", id:"genre", placeholder:"例) イラストレーター" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">自己紹介</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :profile, class:"input-profile", id:"profile", placeholder:"特技や経歴、希望する進路などを自由に記入しましょう" %>
+    </div>
+  </div>
+
+      <div class="form-group">
+      <div class="click-upload">
+        <P>※任意</p>
+        <%= f.file_field :image, id:"header-image" %>
+        <div class="weight-bold-text">
+        ヘッダーに使用する画像を選択(お使いのPCの横幅×400）
+        </div>
+      </div>
+    </div>
+
+  <div class="sign-up-btn">
+      <%= f.submit "登録", class:"sign-up-color-btn" %>
+  </div>
+</div>
+<% end %>
+
+<p class="session-login-message">※既に登録済の方はこちら</p>
+<%= render "devise/shared/links" %>
+
+<div class="footer-logo">
+<%= link_to image_tag("portplus-logo2.png", class:"sign-up-logo3"), indextop_works_path %>
+</div>

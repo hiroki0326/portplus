@@ -1,0 +1,20 @@
+<div class="slide3">
+  <header>
+    <%= image_tag("portplus-logo2.png", class:"portplus-logo2") %>
+  </header>
+  <div class="background2">
+      <P> make up portfolio </p>
+      <h1 class="port-text">あなたの作品に色付けを。</h1>
+      <h2 class="port-text-sub">オリジナルのポートフォリオを作成しましょう。</h2>
+      <h2> <span class="font_color">picture</span> / <span class="font_color2">illustration</span> / <span class="font_color3">design</span>  ... </h2>
+    <div class="session">
+          <% if user_signed_in? %>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+            <li><%= link_to 'マイページへ', user_path(current_user.id), class: "logout" %></li>
+          <% else %>
+            <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+            <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+          <% end %>
+    </div>
+  </div>
+</div>

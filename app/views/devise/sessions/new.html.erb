@@ -1,0 +1,35 @@
+<div class="sign-up-logo1">
+<%= image_tag "portplus.flower.png", class:"flower" %>
+<%= link_to image_tag("portplus-logo2.png", class:"sign-up-logo2"), indextop_works_path %>
+</div>
+<div class="sign-up-message">
+<h2> Welcome back !! </h2>
+</div>
+
+<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+<div class="sign-up-page">
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, class:"input-default", autofocus: true, autocomplete: "email" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+    <%= f.label :password %><br />
+    <%= f.password_field :password, class:"input-default", autocomplete: "current-password" %>
+    </div>
+  </div>
+
+
+  <div class="sign-up-btn">
+      <%= f.submit "ログイン", class:"sign-up-color-btn" %>
+  </div>
+</div>
+<% end %>
+
+<p class="session-login-message">※登録がまだの方はこちら</p>
+<%= render "devise/shared/links" %>
+
