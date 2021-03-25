@@ -1,1 +1,63 @@
-  <%= image_tag @work.image %>
+<div id="hamburger">
+  <span class="inner_line" id="line1"></span>
+  <span class="inner_line" id="line2"></span>
+  <span class="inner_line" id="line3"></span>
+</div>
+
+
+<nav id="nav">
+  <ul>
+    <li><%= link_to "BACK", user_path(current_user.id), class:"toplink"%></li>
+    <% if user_signed_in? %>
+    <% if current_user.id == @work.user_id %>
+    <li><%= link_to "EDIT WORK", edit_work_path, class:"toplink"%></li>
+    <% end %>
+    <% end %>
+    <li><%= link_to "TOP PAGE", indextop_works_path, class:"toplink"%></li>
+    <% if user_signed_in? %>
+    <% if current_user.id == @work.user_id %>
+    <li><%= link_to "DELETE WORK", work_path, method: :delete, class:"toplink" %></li>
+    <% end %>
+    <% end %>
+  </ul>
+</nav>
+<% if @work.title.blank? %>
+<div class="work-title-nil">
+<span>&thinsp;-WORK-</span>
+</div>
+<% else %>
+<div class="work-title2">
+<span>&thinsp;-WORK-</span>
+  <div class="work-name">
+    <%= @work.title %>
+  </div>
+</div>
+<% end %>
+
+<div class="show-image">
+  <%= image_tag @work.image, class: :image_size %>
+</div>
+
+<% unless @work.catch_copy.blank? %>
+<div class="work-title3">
+<span>&thinsp;-catch copy-</span>
+  <div class="work-temple">
+    <%= @work.catch_copy %>
+  </div>
+</div>
+<% end %>
+
+<% unless @work.concept.blank? %>
+<div class="work-title4">
+<span>&thinsp;-concept-</span>
+<div class="work-temple">
+<%= @work.concept %>
+</div>
+</div>
+<% end %>
+
+
+
+<div class="site-header-show">
+<p class="site-header">2021 portplus+ All Rights Reserved.</p>
+</div>

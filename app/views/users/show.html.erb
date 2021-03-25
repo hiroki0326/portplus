@@ -9,8 +9,17 @@
 <nav id="nav">
   <ul>
     <li><a href="#profile">PROFILE</a></li>
+    <% if user_signed_in? %>
+    <% if current_user.id == @user.id %>
+    <li><%= link_to "EDIT PROFILE", edit_user_registration_path, class:"toplink"%></li>
+    <% end %>
+    <% end %>
     <li><a href="#works">WORKS</a></li>
+    <% if user_signed_in? %>
+    <% if current_user.id == @user.id %>
     <li><%= link_to "NEW WORK", new_work_path, class:"toplink"%></li>
+    <% end %>
+    <% end %>
     <li><%= link_to "TOP PAGE", indextop_works_path, class:"toplink"%></li>
   </ul>
 </nav>
@@ -76,6 +85,7 @@
 </ul>
 <div class="card-line1"></div>
 </div>
+
 <a name="profile"></a>
 <div class="profile">
 <div class="profile-title">-PROFILE-</div> 

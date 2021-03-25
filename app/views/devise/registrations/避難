@@ -18,20 +18,17 @@
     <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
 
-<div class="form-group">
-<div class='form-text-wrap'>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
-          <%= f.label :password, "パスワード変更" %><i>（変更する場合のみ記入）</i>
-          <%= f.password_field :password, autocomplete: "new-password", class: "input-default", placeholder: "半角英数6文字以上" %>
-</div>
-</div>
         <div class="form-group">
-        <div class='form-text-wrap'>
-          <%= f.label :password_confirmation, "パスワード変更(確認)" %>
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input-default", placeholder: "再入力" %>
+          <%= f.label :password, "パスワード変更" %><i> (変更したい場合)</i>
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "半角英数6文字以上" %>
         </div>
+        <div class="form-group">
+          <%= f.label :password_confirmation, "パスワード変更(確認)" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "再度ご入力ください" %>
         </div>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
