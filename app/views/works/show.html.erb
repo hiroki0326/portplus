@@ -7,7 +7,6 @@
 
 <nav id="nav">
   <ul>
-    <li><%= link_to "BACK", user_path(current_user.id), class:"toplink"%></li>
     <% if user_signed_in? %>
     <% if current_user.id == @work.user_id %>
     <li><%= link_to "EDIT WORK", edit_work_path, class:"toplink"%></li>
