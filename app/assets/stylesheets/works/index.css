@@ -43,10 +43,25 @@
     background-color: #111111;
   }
 
+  header {
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 0.2px solid gray;
+  }
+
   .portplus-logo2 {
-    margin: 25px 0 0 19px;
+    margin: 10px 0 0 19px;
     width: 9%;
     height: 6%;
+  }
+
+  .sumple {
+    color: white;
+    font-size: 33px;
+    border-radius: 1px;
+    position: absolute;
+    right: 0;
+    margin: 10px 19px 0 0;
   }
 
   .background2 {
@@ -55,6 +70,7 @@
     flex-direction: column;
     justify-content: center;
     color: white;
+    margin-top: 55px;
   }
 .background2 p {
   font-family: 'Dancing Script', cursive;
