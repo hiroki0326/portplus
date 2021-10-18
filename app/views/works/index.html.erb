@@ -6,25 +6,139 @@
         <%= image_tag "portplus-logo.png", class:"portplus-logo" %>
       </div>
     </div>
-      <div class="slide2">
-      <header>
-      <%= image_tag("portplus-logo2.png", class:"portplus-logo2") %>
-      <%= link_to 'sample', user_path(44), class: "sumple" %>
-      </header>
-        <div class="background2">
-          <P> make up portfolio </p>
-          <h1 class="port-text">あなたの作品に色付けを。</h1>
-          <h2 class="port-text-sub">オリジナルのポートフォリオを作成しましょう。</h2>
-          <h2> <span class="font_color">picture</span> / <span class="font_color2">illustration</span> / <span class="font_color3">design</span>  ... </h2>
-          <div class="session">
-          <% if user_signed_in? %>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-            <li><%= link_to 'マイページへ', user_path(current_user.id), class: "logout" %></li>
-          <% else %>
-            <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-            <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-          <% end %>
+  </div>
+
+    <div class="slide2">
+      <div class="home-img">
+        <%= image_tag "border2.png" %>
+      </div>
+      <div class="home-img2">
+        <%= image_tag "flower.png" %>
+      </div>
+          <header>
+            <div class="header-left">
+              <%= image_tag("portplus-logo3.png", class:"portplus-logo2") %>
+              <ul>
+                <li><%= link_to 'sample', user_path(44), class: "sample" %></li>
+                <li><%= link_to "service", { anchor: "service4" } %></li>
+              </ul>
+            </div>
+            <div class="header-right">
+              <ul>
+                  <% if user_signed_in? %>
+                  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "login-color" %></li>
+                  <li><%= link_to 'マイページへ', user_path(current_user.id), class: "new" %></li>
+                  <% else %>
+                  <li><%= link_to 'ログイン', new_user_session_path, class: "login-color" %></li>
+                  <li><%= link_to '新規登録', new_user_registration_path, class: "new" %></li>
+                  <% end %>
+              </ul>
+            </div>
+          </header>
+          <body>
+          <div class="scroll">
+          <a>scroll </a>
+          </div>
+          <div class="home-box">
+            <div class="home">
+              <p>オリジナルのポートフォリオを作成しよう。</p>
+              <h1>あなたの<span>作品</span>に<br>
+              色付けを。</h1>
+            </div>
+            <div class="make-up">
+              <% if user_signed_in? %>
+                <li><%= link_to 'make up portfolio >', user_path(current_user.id), class: "make" %></li>
+              <% else %>
+                <li><%= link_to 'make up portfolio >', new_user_registration_path, class: "make" %></li>
+              <% end %>
+            </div>
+          </div>
+          </body>
+
+  <div class="service-box">
+    <a id="service4"></a>
+    <div class="home-box2"></div>
+    <div class="service-box3">
+      <div class="service-img">
+        <%= image_tag("design2.png", class:"design2") %>
+        <%= image_tag("design1.png", class:"design1") %>
+      </div>
+      <div class="service">
+        <p>SERVICE</p>
+      </div>
+      <div class="service-img2">
+        <div class="service-img-cof">
+          <%= image_tag("pen2.png", class:"service-list") %>
+          <h1>作品のアップロード</h1>
+            <div class="service-h2">
+              <h2>ワンクリックで簡単に投稿できます。作品数に制限もありません。</h2>
+            </div>
+        </div>
+        <div class="service-img-cof">
+        <%= image_tag("plofile.png", class:"service-list") %>
+        <h1>プロフィールの作成</h1>
+        <div class="service-h2">
+        <h2>プロフィールの公開や編集が行えます。SNSへの誘導も可能です。</h2>
+        </div>
+        </div>
+        <div class="service-img-cof">
+        <%= image_tag("dustbox.png", class:"service-list") %>
+        <h1>作品の削除</h1>
+        <div class="service-h2">
+        <h2>作品の削除が簡単に行えます。</h2>
+        </div>
+        </div>
+        <div class="service-img-cof">
+        <%= image_tag("config.png", class:"service-list") %>
+        <h1>作品の修正や編集</h1>
+        <div class="service-h2">
+        <h2>作品の修正や編集がワンクリックで行えます。</h2>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="service-que">
+    <div class="service-que-box"></div>
+      <div class="service-que2">
+        <%= image_tag("border2.png", class:"border3") %>
+        <%= image_tag("servicedes.png", class:"service-logo") %>
+        <%= image_tag("try.png", class:"try") %>
+        <%= image_tag("try3.png", class:"try3") %>
+      </div>
+      <div class="service-contents">
+        <div class="service-custom">
+        <p>お気軽にご質問・ご相談ください</p>
+        </div>
+        <div class="service-border0">
+          <div class="service-border1"></div>
+          <div class="service-border2"></div>
+        </div>
+
+        <div class="service-content-box">
+          <div class="service-content">
+            <%= image_tag("PDF.png", class:"service-content-pdf") %>
+            <p>資料をダウンロード</p>
+          </div>
+          <div class="service-content">
+            <%= image_tag("call.png") %>
+            <p>リモートでお問い合わせ</p>
+          </div>
+          <div class="service-content">
+            <%= image_tag("mail.png", class:"service-content-mail") %>
+            <p>メールでお問い合わせ</p>
           </div>
         </div>
       </div>
   </div>
+
+
+  <footer>
+    <%= image_tag("logo-white.png", class:"footer-logo") %>
+    <ul class="footer-list">
+      <li>home</li>
+      <li><%= link_to 'sample', user_path(44), class: "footer-sample" %></li>
+      <li>service</li>
+    </ul>
+    <p class="footer-font">2021 portplus</p>
+  </footer>
