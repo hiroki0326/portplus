@@ -69,7 +69,7 @@
     margin-left: auto;
     position:relative;
     display: block;
-    box-shadow: 4px 4px 15px #aaaaaa;
+    box-shadow: 3px 3px 15px #aaaaaa;
   }
 
   .home-box {
@@ -492,7 +492,7 @@
     margin-top: 5px;
     height: 48px;
     padding: 10px 16px 8px;
-    border-radius: 4px;
+    border-radius: 3px;
     border: 1px solid #ccc;
     background: #fff;
     font-size: 16px;
@@ -504,7 +504,7 @@
     margin-top: 5px;
     height: 48px;
     padding: 10px 16px 8px;
-    border-radius: 4px;
+    border-radius: 3px;
     border: 1px solid #ccc;
     background: #fff;
     font-size: 16px;
@@ -516,7 +516,7 @@
     margin-top: 5px;
     height: 200px;
     padding: 10px 16px 8px;
-    border-radius: 4px;
+    border-radius: 3px;
     border: 1px solid #ccc;
     background: #fff;
     font-size: 16px;
